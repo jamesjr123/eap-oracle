@@ -1,4 +1,4 @@
-package com.redhat.example;
+package example;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,7 +28,7 @@ public class TestServlet extends HttpServlet {
         super();
 
         try {
-            String strDSName = "java:comp/env/jdbc/datasource";
+            String strDSName = "java:jboss/datasources/shrDS";
             ctx = new InitialContext();
             ds = (javax.sql.DataSource) ctx.lookup(strDSName);
         } catch (Exception e) {
